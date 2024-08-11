@@ -37,6 +37,14 @@ module.exports = {
       screens: {
         xs: '480px',
       },
+      colors: {
+        'app-blue': {
+          900: '#3D52D5',
+        },
+        'app-light-blue': {
+          900: '#52CCDE',
+        },
+      },
     },
   },
   plugins: [
@@ -46,6 +54,6 @@ module.exports = {
       addVariant('sidebar-expanded', ({ modifySelectors, separator }) => {
         modifySelectors(({ className }) => `.sidebar-expanded .${e(`sidebar-expanded${separator}${className}`)}`);
       });
-    }),    
+    }),
   ],
 };
