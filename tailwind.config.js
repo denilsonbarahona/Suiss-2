@@ -38,11 +38,18 @@ module.exports = {
         xs: '480px',
       },
       colors: {
+        'app-red': {
+          900: '#FD3F34',
+        },
         'app-blue': {
           900: '#3D52D5',
         },
         'app-light-blue': {
           900: '#52CCDE',
+        },
+        'app-gray': {
+          500: '#969696',
+          800: '#575757'
         },
       },
     },
