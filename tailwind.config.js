@@ -44,10 +44,14 @@ module.exports = {
         'app-blue': {
           900: '#3D52D5',
         },
+        'app-blue-gray': {
+          900: '#2D2D2D',
+        },
         'app-light-blue': {
           900: '#52CCDE',
         },
         'app-gray': {
+          50: '#F4F4F4',
           500: '#969696',
           800: '#575757'
         },

@@ -130,7 +130,7 @@ export default function Sidebar() {
     <div className={`min-w-fit ${sidebarExpanded ? "sidebar-expanded" : ""}`}>
       {/* Sidebar backdrop (mobile only) */}
       <Transition
-        className="fixed inset-0 bg-white bg-opacity-30 z-40 lg:hidden lg:z-auto"
+        className="fixed inset-0 bg-opacity-30 z-40 lg:hidden lg:z-auto"
         show={sidebarOpen}
         enter="transition-opacity ease-out duration-200"
         enterFrom="opacity-0"
@@ -148,7 +148,7 @@ export default function Sidebar() {
         as="div"
         id="sidebar"
         ref={sidebar}
-        className="flex lg:!flex flex-col absolute z-40 left-0 top-0 lg:static lg:left-auto lg:top-auto lg:translate-x-0 h-[100dvh] overflow-y-scroll lg:overflow-y-auto no-scrollbar w-64 lg:w-20 lg:sidebar-expanded:!w-64 2xl:!w-64 shrink-0 bg-white border-r p-4 transition-all duration-200 ease-in-out"
+        className="flex lg:!flex flex-col absolute z-40 left-0 top-0 lg:static lg:left-auto lg:top-auto lg:translate-x-0 h-[100dvh] overflow-y-scroll lg:overflow-y-auto no-scrollbar w-64 lg:w-20 lg:sidebar-expanded:!w-64 2xl:!w-64 shrink-0 bg-white dark:bg-slate-900 border-r dark:border-none p-4 transition-all duration-200 ease-in-out"
         enterFrom="-translate-x-full"
         enterTo="translate-x-0"
         leaveFrom="translate-x-0"
@@ -185,7 +185,7 @@ export default function Sidebar() {
                 <li
                   className={`px-3 py-2 rounded-3xl mb-0.5 last:mb-0 ${
                     segments.includes(option.href.replace("/", "")) &&
-                    "bg-app-red-900 text-white"
+                    "bg-app-red-900"
                   }`}
                   key={option.href}
                 >
@@ -198,12 +198,12 @@ export default function Sidebar() {
                               ? "#ffff"
                               : "#575757"
                           }
-                          className="shrink-0 h-6 w-6 items-center"
+                          className="shrink-0 h-6 w-6 items-center dark:text-white"
                           viewBox="0 0 24 24"
                         />
                       </div>
                       <span
-                        className={`text-xs font-medium text-app-gray-500 ml-3 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200 ${
+                        className={`text-xs font-medium text-app-gray-500 dark:text-white ml-3 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200 ${
                           segments.includes(option.href.replace("/", "")) &&
                           "text-white"
                         }
