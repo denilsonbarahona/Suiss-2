@@ -43,10 +43,11 @@ export const hexToRGB = (h: string): string => {
 
 export const formatValue = (value: number): string => Intl.NumberFormat('en-US', {
   style: 'currency',
-  currency: 'USD',
-  maximumSignificantDigits: 3,
+  currency: 'HNL',
   notation: 'compact',
-}).format(value)
+  compactDisplay: 'short',
+  maximumSignificantDigits: 3,
+}).format(value).replace('HNL', 'L')
 
 export const formatThousands = (value: number): string => Intl.NumberFormat('en-US', {
   maximumSignificantDigits: 3,

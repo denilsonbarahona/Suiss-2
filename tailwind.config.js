@@ -45,9 +45,11 @@ module.exports = {
           900: '#3D52D5',
         },
         'app-blue-gray': {
+          500: '#969696',
           900: '#2D2D2D',
         },
         'app-light-blue': {
+          200: '#E1F3F6',
           900: '#52CCDE',
         },
         'app-gray': {
