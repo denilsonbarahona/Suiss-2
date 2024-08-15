@@ -1,43 +1,76 @@
-'use client'
+'use client';
 
-import DoughnutChart from '@/components/charts/doughnut-chart'
+import DoughnutChart from '@/components/charts/doughnut-chart';
 
 // Import utilities
-import { tailwindConfig } from '@/components/utils/utils'
+import { tailwindConfig } from '@/components/utils/utils';
 
 export default function DashboardCard06() {
-
   const chartData = {
-    labels: ['United States', 'Italy', 'Other'],
+    labels: [
+      'Salud',
+      'Educación',
+      'Seguridad Social',
+      'Desarrollo Social',
+      'Mujer',
+      'Trabajo y Seguridad Social',
+      'Cultura y Patrimonio',
+      'Derechos Humanos',
+      'Infancia y Familia',
+      'Emprendimiento',
+      'Prevención de Alcoholismo',
+      'Agraria',
+      'Agua y Saneamiento',
+    ],
     datasets: [
       {
         label: 'Top Countries',
-        data: [
-          35, 30, 35,
-        ],
+        data: [45, 67, 12, 98, 33, 76, 54, 89, 22, 41, 63, 90, 18],
         backgroundColor: [
-          tailwindConfig.theme.colors.indigo[500],
-          tailwindConfig.theme.colors.blue[400],
-          tailwindConfig.theme.colors.indigo[800],
+          tailwindConfig.theme.colors['app-blue-gray'][900],
+          tailwindConfig.theme.colors['app-indigo'][900],
+          tailwindConfig.theme.colors['app-light-blue'][900],
+          tailwindConfig.theme.colors['app-blue'][900],
+          tailwindConfig.theme.colors['app-amber'][900],
+          tailwindConfig.theme.colors['app-green'][900],
+          tailwindConfig.theme.colors['app-red'][900],
+          tailwindConfig.theme.colors['app-blue-gray'][500],
+          tailwindConfig.theme.colors['app-indigo'][500],
+          tailwindConfig.theme.colors['app-red'][500],
+          tailwindConfig.theme.colors['app-blue'][500],
+          tailwindConfig.theme.colors['app-light-blue'][500],
+          tailwindConfig.theme.colors['app-green'][500],
         ],
         hoverBackgroundColor: [
-          tailwindConfig.theme.colors.indigo[600],
-          tailwindConfig.theme.colors.blue[500],
-          tailwindConfig.theme.colors.indigo[900],
+          tailwindConfig.theme.colors['app-blue-gray'][900],
+          tailwindConfig.theme.colors['app-indigo'][900],
+          tailwindConfig.theme.colors['app-light-blue'][900],
+          tailwindConfig.theme.colors['app-blue'][900],
+          tailwindConfig.theme.colors['app-amber'][900],
+          tailwindConfig.theme.colors['app-green'][900],
+          tailwindConfig.theme.colors['app-red'][900],
+          tailwindConfig.theme.colors['app-blue-gray'][500],
+          tailwindConfig.theme.colors['app-indigo'][500],
+          tailwindConfig.theme.colors['app-red'][500],
+          tailwindConfig.theme.colors['app-blue'][500],
+          tailwindConfig.theme.colors['app-light-blue'][500],
+          tailwindConfig.theme.colors['app-green'][500],
         ],
         borderWidth: 0,
       },
     ],
-  }
+  };
 
-  return(
-    <div className="flex flex-col col-span-full sm:col-span-6 xl:col-span-4 bg-white dark:bg-slate-800 shadow-lg rounded-sm border border-slate-200 dark:border-slate-700">
-      <header className="px-5 py-4 border-b border-slate-100 dark:border-slate-700">
-        <h2 className="font-semibold text-slate-800 dark:text-slate-100">Top Countries</h2>
+  return (
+    <div className='flex flex-col col-span-full xl:col-span-6 bg-white dark:bg-slate-800 shadow-lg rounded-3xl border border-slate-200 dark:border-slate-700'>
+      <header className='px-5 py-4 border-b border-slate-100 dark:border-slate-700'>
+        <h2 className='font-semibold text-slate-800 dark:text-slate-100'>
+          Distribución de Presupuesto por Área
+        </h2>
       </header>
       {/* Chart built with Chart.js 3 */}
       {/* Change the height attribute to adjust the chart height */}
       <DoughnutChart data={chartData} width={389} height={260} />
     </div>
-  )
+  );
 }

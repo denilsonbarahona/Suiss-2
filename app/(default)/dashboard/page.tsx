@@ -1,13 +1,6 @@
 'use client';
 
 import WelcomeBanner from './welcome-banner';
-import DashboardCard05 from './dashboard-card-05';
-import DashboardCard06 from './dashboard-card-06';
-import DashboardCard07 from './dashboard-card-07';
-import DashboardCard08 from './dashboard-card-08';
-import DashboardCard09 from './dashboard-card-09';
-import DashboardCard10 from './dashboard-card-10';
-import DashboardCard11 from './dashboard-card-11';
 import SuissBarChart from '@/components/SuissCharts/suissBarChart';
 import SuissCakeChart from '@/components/SuissCharts/SuissCakeChart';
 import DashboardReports from '@/components/cards/dashboardReports';
