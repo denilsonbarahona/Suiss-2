@@ -1,4 +1,10 @@
-export default function WelcomeBanner() {
+export default function WelcomeBanner({
+  title = 'Bienvenid@, User Name 👋',
+  description = 'Estas son algunas actualizaciones:',
+}: {
+  title?: string;
+  description?: string;
+}) {
   return (
     <div className='relative bg-app-light-blue-900 rounded-2xl dark:bg-indigo-500 p-4 sm:p-6 overflow-hidden mb-8'>
       {/* Background illustration */}
@@ -65,10 +71,10 @@ export default function WelcomeBanner() {
       {/* Content */}
       <div className='relative'>
         <h1 className='text-2xl md:text-3xl text-white dark:text-slate-100 font-bold mb-1'>
-          Bienvenid@, User Name 👋
+          {title}
         </h1>
         <p className='text-app-light-blue-200 dark:text-indigo-200'>
-          Estas son algunas actualizaciones:
+          {description}
         </p>
       </div>
     </div>

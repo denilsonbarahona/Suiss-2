@@ -39,16 +39,21 @@ module.exports = {
       },
       colors: {
         'app-red': {
+          500: '#ED9D99',
           900: '#FD3F34',
         },
         'app-blue': {
+          500: '#9EA9EA',
           900: '#3D52D5',
         },
         'app-blue-gray': {
+          50: '#F4F4F4',
           500: '#969696',
+          700: '#6C6C6C',
           900: '#2D2D2D',
         },
         'app-light-blue': {
+          500: '#B4E2E8',
           200: '#E1F3F6',
           900: '#52CCDE',
         },
@@ -57,6 +62,17 @@ module.exports = {
           500: '#969696',
           800: '#575757'
         },
+        'app-indigo': {
+          500: '#d8c7e7',
+          900: '#A976D6'
+        },
+        'app-amber': {
+          900: '#EDAE49'
+        },
+        'app-green': {
+          500: "#88DCC0",
+          900: "#10b981"
+        }
       },
     },
   },
