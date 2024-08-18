@@ -72,6 +72,9 @@ module.exports = {
         'app-green': {
           500: "#88DCC0",
           900: "#10b981"
+        },
+        'app-text-base': {
+          900: '#1E1E1E',
         }
       },
     },
