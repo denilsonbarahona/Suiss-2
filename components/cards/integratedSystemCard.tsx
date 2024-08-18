@@ -28,7 +28,7 @@ export default function IntegratedSystemCard({
             fill='#52CCDE'
           />
         </svg>
-        <h4 className='font-normal text-sm text-app-blue-gray-900'>{date}</h4>
+        <h4 className='font-normal text-sm text-app-blue-gray-900 dark:text-white'>{date}</h4>
       </header>
       <p className='text-xs font-normal text-app-blue-900'>{subTitle}</p>
       <div className='flex flex-col dark:border-slate-700'>
@@ -40,7 +40,7 @@ export default function IntegratedSystemCard({
         {description}
       </p>
       <footer className="border-t border-t-app-blue-gray-50 pt-4">
-        <p className="font-medium text-base text-app-text-base-900">{footer}</p>
+        <p className="font-medium text-base text-app-text-base-900 dark:text-white">{footer}</p>
       </footer>
     </div>
   );
