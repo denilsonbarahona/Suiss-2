@@ -28,7 +28,7 @@ const sideBarOptions = [
   },
   {
     name: "Áreas de Acción Gobierno",
-    href: "/government",
+    href: "/government-action-areas",
     icon: GovernmentIcon,
   },
   {

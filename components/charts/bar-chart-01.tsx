@@ -187,7 +187,8 @@ export default function BarChart01({ data, width, height }: BarChartProps) {
               // label.style.fontSize = tailwindConfig.theme.fontSize.sm[0];
               // label.style.lineHeight =
               //   tailwindConfig.theme.fontSize.sm[1].lineHeight;
-              label.style.fontSize = tailwindConfig.theme.fontSize['3xl'][0];
+              label.style.fontSize =
+                data.labelStyle ?? tailwindConfig.theme.fontSize['3xl'][0];
               label.style.lineHeight =
                 tailwindConfig.theme.fontSize['3xl'][1].lineHeight;
               label.style.fontWeight = tailwindConfig.theme.fontWeight.bold;
