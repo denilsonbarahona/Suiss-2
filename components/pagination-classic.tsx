@@ -16,7 +16,7 @@ export default function PaginationClassic({ data }: { data?: DataTable }) {
           </li>
           <li className='ml-3 first:ml-0'>
             <a
-              className='btn rounded-3xl bg-white dark:bg-slate-800 border-app-light-blue-900 dark:border-slate-700 hover:border-slate-300 dark:hover:border-slate-600 text-app-blue-gray-900'
+              className='btn rounded-3xl bg-white dark:bg-slate-800 border-app-light-blue-900 dark:border-slate-700 hover:border-slate-300 dark:hover:border-slate-600 text-app-blue-gray-900 dark:text-white'
               href='#0'
             >
               Siguiente -&gt;
