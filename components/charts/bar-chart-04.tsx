@@ -146,9 +146,10 @@ export default function BarChart04({
             box.style.pointerEvents = 'none'
             // Label
             const label = document.createElement('span')
-            label.classList.add('text-slate-500', 'dark:text-slate-400')
+            label.classList.add('text-slate-800', 'dark:text-slate-400')
             label.style.fontSize = tailwindConfig.theme.fontSize.sm[0]
             label.style.lineHeight = tailwindConfig.theme.fontSize.sm[1].lineHeight
+            label.style.fontWeight = tailwindConfig.theme.fontWeight.bold;
             const labelText = document.createTextNode(item.text)
             label.appendChild(labelText)
             li.appendChild(button)

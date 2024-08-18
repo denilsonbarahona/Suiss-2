@@ -18,6 +18,7 @@ import AgrarianIcon from '@/components/icons/AgrarianIcon';
 import AlcoholPreventionIcon from '@/components/icons/AlcoholPreventionIcon';
 import WaterIcon from '@/components/icons/WaterIcon';
 import EntrepreneurshipIcon from '@/components/icons/EntrepreneurshipIcon';
+import SuissTable from '@/components/SuissTables/SuissTable';
 
 const governmentActionAreas = [
   {
@@ -113,7 +114,57 @@ const governmentActionAreas = [
   },
 ];
 
-export default function Dashboard() {
+const dataTable = {
+  title: 'Ejecución de Presupuesto Global por Áreas',
+  headers: [
+    {
+      title: 'ÁREA',
+    },
+    {
+      title: 'TOTAL ASIGNADO',
+    },
+    {
+      title: 'EJECUTADO',
+    },
+    {
+      title: '% EJECUTADO',
+    },
+  ],
+  rows: [
+    {
+      category: 'Salud',
+      budget: '$500,000',
+      actual: '$450,000',
+      percentage: '90%',
+    },
+    {
+      category: 'Educación',
+      budget: '$400,000',
+      actual: '$380,000',
+      percentage: '95%',
+    },
+    {
+      category: 'Seguridad Social',
+      budget: '$350,000',
+      actual: '$320,000',
+      percentage: '91%',
+    },
+    {
+      category: 'Desarrollo Social',
+      budget: '$600,000',
+      actual: '$580,000',
+      percentage: '97%',
+    },
+    {
+      category: 'Trabajo y Seguridad Social',
+      budget: '$300,000',
+      actual: '$250,000',
+      percentage: '83%',
+    },
+  ],
+};
+
+export default function GovernmentAreas() {
   return (
     <div className='px-4 sm:px-6 lg:px-8 py-8 w-full max-w-[96rem] mx-auto'>
       <WelcomeBanner
@@ -122,7 +173,7 @@ export default function Dashboard() {
       />
 
       <div className='grid grid-cols-12 gap-6'>
-        <DashboardCard07 />
+        <SuissTable data={dataTable} />
         <DashboardCard06 />
         <div className='w-full col-span-12 flex flex-col lg:flex-row gap-3 lg:gap-0'>
           <h1 className='w-full text-3xl text-center lg:text-start text-slate-800 dark:text-slate-100 font-bold'>
@@ -153,7 +204,7 @@ export default function Dashboard() {
 
       <div className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8 mt-8'>
         {governmentActionAreas.map((area, index) => (
-          <div className='grid-cols-4'>
+          <div key={index} className='grid-cols-4'>
             <GovernmentActionAreas
               Icon={area.icon}
               title={area.title}
