@@ -5,6 +5,17 @@ import DoughnutChart from '@/components/charts/doughnut-chart';
 // Import utilities
 import { tailwindConfig } from '@/components/utils/utils';
 
+type ChartData = {
+  labels: string[];
+  datasets: {
+    label: string;
+    data: number[];
+    backgroundColor: string[];
+    hoverBackgroundColor: string[];
+    borderWidth: number;
+  }[];
+};
+
 const chartData = {
   labels: [
     'Salud',
@@ -61,8 +72,12 @@ const chartData = {
 };
 
 export default function DashboardCard06({
+  title = 'Distribución de Presupuesto por Área',
+  data = chartData,
   size = 'col-span-full xl:col-span-6',
 }: {
+  title?: string;
+  data?: ChartData;
   size?: string;
 }) {
   return (
@@ -71,12 +86,12 @@ export default function DashboardCard06({
     >
       <header className='px-5 py-4 border-b border-slate-100 dark:border-slate-700'>
         <h2 className='font-semibold text-slate-800 dark:text-slate-100'>
-          Distribución de Presupuesto por Área
+          {title}
         </h2>
       </header>
       {/* Chart built with Chart.js 3 */}
       {/* Change the height attribute to adjust the chart height */}
-      <DoughnutChart data={chartData} width={389} height={260} />
+      <DoughnutChart data={data} width={389} height={260} />
     </div>
   );
 }

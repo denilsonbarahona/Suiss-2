@@ -199,15 +199,17 @@ export default function BarChart01({ data, width, height }: BarChartProps) {
               //   item.datasetIndex!
               // ].data.reduce((a, b) => a + b, 0);
               // const valueText = document.createTextNode('2029');
-              const labelText = document.createTextNode(item.text);
-              // value.appendChild(valueText);
-              label.appendChild(labelText);
-              li.appendChild(button);
-              button.appendChild(box);
-              button.appendChild(labelContainer);
-              // labelContainer.appendChild(value);
-              labelContainer.appendChild(label);
-              ul.appendChild(li);
+              if (data.showLabels) {
+                const labelText = document.createTextNode(item.text);
+                // value.appendChild(valueText);
+                label.appendChild(labelText);
+                li.appendChild(button);
+                button.appendChild(box);
+                button.appendChild(labelContainer);
+                // labelContainer.appendChild(value);
+                labelContainer.appendChild(label);
+                ul.appendChild(li);
+              }
             });
           },
         },

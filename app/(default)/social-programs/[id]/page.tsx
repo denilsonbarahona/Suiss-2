@@ -16,11 +16,11 @@ const dataAnalytics = {
   rows: [
     {
       title: 'Presupuesto Asignado',
-      number: '4.7K',
+      number: '80%',
     },
     {
       title: 'Gastos Realizados',
-      number: '4.2K',
+      number: '60%',
     },
   ],
 };
@@ -31,23 +31,23 @@ const dataAnalytics2 = {
   rows: [
     {
       title: '2019',
-      number: '4.7K',
+      number: '90%',
     },
     {
       title: '2020',
-      number: '4.7K',
+      number: '80%',
     },
     {
       title: '2021',
-      number: '4.7K',
+      number: '70%',
     },
     {
       title: '2022',
-      number: '4.7K',
+      number: '60%',
     },
     {
       title: '2023',
-      number: '4.7K',
+      number: '50%',
     },
   ],
 };
@@ -58,11 +58,11 @@ const dataAnalytics3 = {
   rows: [
     {
       title: '% de Ejecución del Presupuesto',
-      number: '4.7K',
+      number: '30%',
     },
     {
       title: 'Beneficiarios Atendidos',
-      number: '4.2K',
+      number: '10%',
     },
   ],
 };
@@ -90,6 +90,7 @@ const barChartData = {
     },
   ],
   labelStyle: 'font-semibold text-base',
+  showLabels: true,
 };
 
 export default function SocialProgram() {
