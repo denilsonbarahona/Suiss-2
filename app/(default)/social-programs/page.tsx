@@ -205,11 +205,11 @@ export default function SocialPrograms() {
           </span>
         </div>
       </div>
-      <div className='flex justify-between gap-6'>
-        <div className='w-full md:w-1/4'>
+      <div className='flex flex-col xl:flex-row justify-between gap-6'>
+        <div className='w-full xl:w-1/4'>
           <FilterSidebar actionAreas={socialPrograms} />
         </div>
-        <div className='w-full md:w-3/4'>
+        <div className='w-full xl:w-3/4'>
           <SuissTable data={dataTable} />
         </div>
       </div>

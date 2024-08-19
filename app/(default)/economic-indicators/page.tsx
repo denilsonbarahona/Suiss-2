@@ -1,3 +1,6 @@
+'use client';
+
+import Map from '@/components/SuissCharts/Map';
 import SuissTable from '@/components/SuissTables/SuissTable';
 import { tailwindConfig } from '@/components/utils/utils';
 
@@ -86,8 +89,8 @@ export default function ExecutionAndBudget() {
         <div className='[&>div]:h-full'>
           <SuissTable data={tableData} />
         </div>
-        <div className='w-full bg-white rounded-3xl'>
-          <p>Regiones con tasas de pobreza</p>
+        <div className='w-full bg-white dark:bg-slate-800 rounded-3xl'>
+          <Map title='Mapa de Desempeño Histórico de Programas' />
         </div>
       </div>
     </div>

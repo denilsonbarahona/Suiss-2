@@ -7,6 +7,7 @@ import SuissBarBottomChart from '@/components/SuissCharts/SuissBarBottomChart';
 import SuissTable from '@/components/SuissTables/SuissTable';
 import SuissTimeLineChart from '@/components/SuissCharts/suissTimelineChart';
 import SearchForm from '@/components/search-form';
+import Map from '@/components/SuissCharts/Map';
 
 const chartData = {
   labels: ['Norte', 'Central', 'Sur', 'Este', 'Oeste'],
@@ -299,8 +300,8 @@ export default function GeographicImpact() {
         <div className='w-full lg:w-1/3'>
           <SuissBarBottomChart title="KPI's de las Aldeas con Cobertura vs las que no Tienen Cobertura" />
         </div>
-        <div className='w-full lg:w-2/3 bg-white rounded-3xl'>
-          <p>Regiones con tasas de pobreza</p>
+        <div className='w-full lg:w-2/3 bg-white dark:bg-slate-800 rounded-3xl py-4 px-2'>
+          <Map title='Indicador Geográfico: Acceso a Agua Potable' />
         </div>
       </div>
       <div className='grid grid-cols-1 gap-6 mb-6'>
@@ -321,14 +322,14 @@ export default function GeographicImpact() {
         <div className='w-full lg:w-1/2'>
           <SuissTimeLineChart title='Evolución de las Aldeas a lo Largo del Tiempo' />
         </div>
-        <div className='w-full lg:w-1/2 bg-white rounded-3xl'>
-          <p>Regiones con tasas de pobreza</p>
+        <div className='w-full  lg:w-1/2 bg-white dark:bg-slate-800 rounded-3xl py-4 px-2'>
+          <Map title='Mapa de Zonas de Riesgo en Aldeas' />
         </div>
       </div>
       <div>
         <div className='w-full col-span-12 flex flex-col lg:flex-row gap-3 lg:gap-0 mb-8'>
           <h1 className='w-full text-3xl text-center lg:text-start text-slate-800 dark:text-slate-100 font-bold'>
-          Oferta de Servicios
+            Oferta de Servicios
           </h1>
           <span className='flex items-center justify-center flex-col lg:flex-row gap-2'>
             <SearchForm
