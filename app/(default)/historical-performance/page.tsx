@@ -1,3 +1,6 @@
+'use client';
+
+import Map from '@/components/SuissCharts/Map';
 import SuissBarChart from '@/components/SuissCharts/suissBarChart';
 import SuissBarTopChart from '@/components/SuissCharts/SuissBarTopChart';
 import { tailwindConfig } from '@/components/utils/utils';
@@ -67,10 +70,7 @@ export default function HistoricalPerformance() {
       </div>
       <div className='grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8'>
         <div>
-          <SuissBarChart
-            title='Evolución en Cobertura'
-            chartData={chartData}
-          />
+          <SuissBarChart title='Evolución en Cobertura' chartData={chartData} />
         </div>
         <div>
           <SuissBarChart
@@ -86,8 +86,8 @@ export default function HistoricalPerformance() {
             data={barTopchartData}
           />
         </div>
-        <div className='w-full bg-white rounded-3xl'>
-          <p>Regiones con tasas de pobreza</p>
+        <div className='w-full bg-white dark:bg-slate-800 rounded-3xl'>
+          <Map title='Mapa de Desempeño Histórico de Programas' />
         </div>
       </div>
     </div>

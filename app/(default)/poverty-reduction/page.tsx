@@ -6,6 +6,7 @@ import { tailwindConfig } from '@/components/utils/utils';
 import DashboardCard06 from '../dashboard/dashboard-card-06';
 import SuissAnalytics from '@/components/SuissCharts/SuissAnalytics';
 import SuissBarTopChart from '@/components/SuissCharts/SuissBarTopChart';
+import Map from '@/components/SuissCharts/Map';
 
 const chartData = {
   labels: ['RS', 'CM', 'SE', 'ALF', 'IS'],
@@ -199,8 +200,8 @@ export default function PovertyReduction() {
         </div>
       </div>
       <div className='flex flex-col lg:flex-row gap-8 mt-8 mb-8'>
-        <div className='w-full lg:w-3/4 bg-white rounded-3xl'>
-          <p>Regiones con tasas de pobreza</p>
+        <div className='w-full lg:w-3/4 bg-white dark:bg-slate-800 rounded-3xl py-4 px-2'>
+          <Map title='Regiones con tasas de pobreza' />
         </div>
         <div className='w-full lg:w-1/4'>
           <DashboardCard06

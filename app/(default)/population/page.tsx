@@ -3,8 +3,8 @@
 import SuissBarChart from '@/components/SuissCharts/suissBarChart';
 import SuissLineChart from '@/components/SuissCharts/SuissLineChart';
 import { tailwindConfig } from '@/components/utils/utils';
-import SuissBarBottomChart from '@/components/SuissCharts/SuissBarBottomChart';
 import SuissAnalytics2 from '@/components/SuissCharts/SuissAnalytics2';
+import Map from '@/components/SuissCharts/Map';
 
 const chartData = {
   labels: ['Norte', 'Central', 'Sur', 'Este', 'Oeste'],
@@ -54,8 +54,8 @@ export default function Population() {
         <div className='w-full lg:w-1/2'>
           <SuissAnalytics2 />
         </div>
-        <div className='w-full lg:w-1/2 bg-white rounded-3xl'>
-          <p>Regiones con tasas de pobreza</p>
+        <div className='w-full lg:w-1/2 bg-white dark:bg-slate-800 rounded-3xl'>
+          <Map title='Mapa de población' />
         </div>
       </div>
     </div>
