@@ -73,7 +73,7 @@ const sideBarOptions = [
   },
   {
     name: "Indicadores Económicos y Demográficos",
-    href: "/economic-and-demographic-indicators",
+    href: "/economic-indicators",
     icon: EconomicIcon,
   },
   {
