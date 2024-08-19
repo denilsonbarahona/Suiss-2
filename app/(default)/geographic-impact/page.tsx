@@ -3,12 +3,8 @@
 import SuissBarChart from '@/components/SuissCharts/suissBarChart';
 import SuissLineChart from '@/components/SuissCharts/SuissLineChart';
 import { tailwindConfig } from '@/components/utils/utils';
-import DashboardCard06 from '../dashboard/dashboard-card-06';
-import SuissAnalytics from '@/components/SuissCharts/SuissAnalytics';
-import SuissBarTopChart from '@/components/SuissCharts/SuissBarTopChart';
 import SuissBarBottomChart from '@/components/SuissCharts/SuissBarBottomChart';
 import SuissTable from '@/components/SuissTables/SuissTable';
-import { access } from 'fs';
 import SuissTimeLineChart from '@/components/SuissCharts/suissTimelineChart';
 import SearchForm from '@/components/search-form';
 
