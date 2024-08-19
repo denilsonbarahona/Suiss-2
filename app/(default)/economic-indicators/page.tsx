@@ -1,7 +1,4 @@
-import SuissAnalytics from '@/components/SuissCharts/SuissAnalytics';
-import SuissBarChart from '@/components/SuissCharts/suissBarChart';
-import SuissBarTopChart from '@/components/SuissCharts/SuissBarTopChart';
-import SuissCakeChart from '@/components/SuissCharts/SuissCakeChart';
+import SuissTable from '@/components/SuissTables/SuissTable';
 import { tailwindConfig } from '@/components/utils/utils';
 
 const chartData = {
@@ -29,19 +26,52 @@ const chartData = {
   showLabels: false,
 };
 
-const dataAnalytics = {
-  title: 'Presupuestos Anuales o por Periodos',
-  headers: ['Tipo', 'Monto'],
-  rows: [
+const tableData = {
+  title: 'Análisis de Indicadores',
+  headers: [
     {
-      title: 'Presupuesto Asignado',
-      number: '80%',
+      title: 'Año',
     },
     {
-      title: 'Gastos Realizados',
-      number: '60%',
+      title: 'Ingreso per Cápita (USD)',
+    },
+    {
+      title: 'Tasa de Desempleo (%)',
     },
   ],
+  rows: [
+    {
+      area: 'Nombre de Aldea',
+      total: '$5,000',
+      percentage: '10%',
+    },
+    {
+      area: 'Nombre de Aldea',
+      total: '$5,000',
+      percentage: '10%',
+    },
+    {
+      area: 'Nombre de Aldea',
+      total: '$5,000',
+      percentage: '10%',
+    },
+    {
+      area: 'Nombre de Aldea',
+      total: '$5,000',
+      percentage: '10%',
+    },
+    {
+      area: 'Nombre de Aldea',
+      total: '$5,000',
+      percentage: '10%',
+    },
+    {
+      area: 'Nombre de Aldea',
+      total: '$5,000',
+      percentage: '10%',
+    },
+  ],
+  showPagination: false,
 };
 
 export default function ExecutionAndBudget() {
@@ -49,23 +79,15 @@ export default function ExecutionAndBudget() {
     <div className='px-4 sm:px-6 lg:px-8 py-8 w-full max-w-[96rem] mx-auto'>
       <div className='w-full col-span-12 flex flex-col lg:flex-row gap-3 lg:gap-0 mb-8'>
         <h1 className='w-full text-3xl text-center lg:text-start text-slate-800 dark:text-slate-100 font-bold'>
-          Ejecución y Presupuesto
+          Indicadores Económicos y Demográficos
         </h1>
       </div>
       <div className='grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8'>
         <div className='[&>div]:h-full'>
-          <SuissAnalytics data={dataAnalytics} />
+          <SuissTable data={tableData} />
         </div>
-        <div>
-          <SuissBarChart
-            title='Presupuesto y Ejecución a lo Largo de los Años (en millones)'
-            chartData={chartData}
-          />
-        </div>
-      </div>
-      <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
-        <div>
-          <SuissCakeChart />
+        <div className='w-full bg-white rounded-3xl'>
+          <p>Regiones con tasas de pobreza</p>
         </div>
       </div>
     </div>
