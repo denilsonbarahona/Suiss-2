@@ -8,23 +8,23 @@ export default function DateSelect() {
   const options = [
     {
       id: 0,
-      period: 'Today'
+      period: 'Hoy'
     },
     {
       id: 1,
-      period: 'Last 7 Days'
+      period: 'Últimos 7 días'
     },
     {
       id: 2,
-      period: 'Last Month'
+      period: 'Último Mes'
     },
     {
       id: 3,
-      period: 'Last 12 Months'
+      period: 'Últimos 12 Meses'
     },
     {
       id: 4,
-      period: 'All Time'
+      period: 'Todo el Tiempo'
     }
   ]
 

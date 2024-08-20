@@ -7,6 +7,7 @@ import { tailwindConfig } from '@/components/utils/utils';
 
 type ChartData = {
   labels: string[];
+  detailLabels?: string[];
   datasets: {
     label: string;
     data: number[];
@@ -21,6 +22,13 @@ type ChartData = {
 
 const chartDataDefault = {
   labels: ['RS', 'CM', 'SE', 'ALF', 'IS'],
+  detailLabels: [
+    'Red Solidaria (RS)',
+    'Salud y Educación (SE)',
+    'Infraestructura Social (IS)',
+    'Ciudad Mujer (CM)',
+    'Alfabetización (ALF)',
+  ],
   datasets: [
     // Blue bars
     {
@@ -61,6 +69,18 @@ export default function SuissBarChart({
       {/* Chart built with Chart.js 3 */}
       {/* Change the height attribute to adjust the chart height */}
       <BarChart01 data={chartData} width={595} height={248} />
+      {chartData.detailLabels && chartData.detailLabels?.length > 0 && (
+        <footer className='flex flex-wrap gap-x-3 gap-y-2 justify-center px-5 py-3'>
+          {chartData.detailLabels.map((label, index) => (
+            <p
+              key={index}
+              className='flex font-normal text-xs text-app-blue-gray-500'
+            >
+              {label}
+            </p>
+          ))}
+        </footer>
+      )}
     </div>
   );
 }

@@ -1,5 +1,34 @@
+'use client';
+
 import DateSelect from '@/components/date-select';
 import { SocialProgram } from './page';
+import SidebarLinkGroup from '@/components/ui/sidebar-link-group';
+
+const filterOptions = [
+  {
+    title: 'Área de acción',
+    options: [
+      'Desarrollo Social',
+      'Trabajo y Seguridad Social',
+      'Salud',
+      'Educación',
+      'Cultura y Patrimonio',
+      'Mujer',
+      'Derechos Humanos',
+    ],
+  },
+  {
+    title: 'Institución responsable',
+    options: [
+      'Secretaría de Desarrollo Social (SEDESOL)',
+      'Secretaría de Trabajo y Seguridad Social',
+      'Secretaría de Educación (SEDUC)',
+      'Secretaría de Cultura, Artes y Patrimonio',
+      'Secretaría de la Mujer (SEMUJER)',
+      'Secretaría de Derechos Humanos (SEDH)',
+    ],
+  },
+];
 
 export default function FilterSidebar({
   actionAreas,
@@ -11,7 +40,7 @@ export default function FilterSidebar({
       <div className='bg-white dark:bg-slate-800 shadow-lg rounded-3xl border border-slate-200 dark:border-slate-700 p-5 min-w-[15rem]'>
         <div className='grid grid-cols-1 gap-3'>
           <div>
-            <div className='text-sm text-app-blue-gray-900 dark:text-slate-100 font-normal mb-3'>
+            <div className='text-sm text-app-blue-gray-900 dark:text-slate-100 font-semibold mb-3'>
               Búsqueda avanzada
             </div>
             <ul className='text-sm font-medium space-y-2'>
@@ -22,21 +51,69 @@ export default function FilterSidebar({
               </li>
             </ul>
           </div>
+          {filterOptions.map((option, index) => (
+            <SidebarLinkGroup key={index}>
+              {(handleClick, open) => {
+                return (
+                  <>
+                    <a
+                      className={`block text-sm font-normal text-app-blue-gray-900 dark:text-white  truncate transition duration-150 `}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        handleClick();
+                      }}
+                    >
+                      <div className='flex items-center justify-between'>
+                        <div className='flex items-center'>
+                          <span className=''>{option.title}</span>
+                        </div>
+                        {/* Icon */}
+                        <div className='flex shrink-0 ml-2'>
+                          <svg
+                            className={`w-3 h-3 shrink-0 ml-1 fill-current text-app-gray-800 ${
+                              open && 'rotate-180'
+                            }`}
+                            viewBox='0 0 12 12'
+                          >
+                            <path d='M5.9 11.4L.5 6l1.4-1.4 4 4 4-4L11.3 6z' />
+                          </svg>
+                        </div>
+                      </div>
+                    </a>
+                    <div>
+                      <ul className={`mt-1 ${!open && 'hidden'}`}>
+                        {option.options.map((option, index) => (
+                          <li key={index} className='mb-1 last:mb-0'>
+                            <label className='flex items-center'>
+                              <input
+                                type='checkbox'
+                                className='form-checkbox checked:text-app-red-900 checked:bg-app-red-900'
+                              />
+                              <span className='text-sm ml-2'>{option}</span>
+                            </label>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </>
+                );
+              }}
+            </SidebarLinkGroup>
+          ))}
+
           <div>
-            <select className='form-select w-full border-none shadow-none'>
-              <option>Área de acción</option>
-              {actionAreas.map((area, index) => (
-                <option key={index}>{area.accionArea}</option>
-              ))}
-            </select>
-          </div>
-          <div>
-            <select className='form-select w-full border-none shadow-none'>
-              <option>Institución responsable</option>
-              {actionAreas.map((area, index) => (
-                <option key={index}>{area.institution}</option>
-              ))}
-            </select>
+            <label
+              className='block text-sm font-normal text-app-blue-gray-900 dark:text-white mb-1'
+              htmlFor='default'
+            >
+              Estado de Ejecución
+            </label>
+            <input
+              id='default'
+              className='form-input w-full'
+              type='text'
+              placeholder='80%'
+            />
           </div>
           <div className='[&>div]:w-full [&>div>button]:w-full [&>div>button]:rounded-3xl'>
             <DateSelect />

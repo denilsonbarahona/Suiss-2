@@ -31,8 +31,13 @@ Chart.register(
   Tooltip
 );
 
+interface ExtendedChartData extends ChartData {
+  subTitle?: string;
+  subTitleValue?: string;
+}
+
 interface LineChart05Props {
-  data: ChartData;
+  data: ExtendedChartData;
   width: number;
   height: number;
 }
@@ -210,8 +215,18 @@ export default function LineChart05({ data, width, height }: LineChart05Props) {
   return (
     <>
       <div className='px-5 py-3'>
-        <div className='flex flex-wrap items-end'>
-          <div className='grow ml-2 mb-1'>
+        <div className='flex flex-wrap items-center justify-between'>
+          {data.subTitle && data.subTitleValue && (
+            <div className='flex items-center'>
+              <div className='max-w-[132px] text-sm font-normal text-app-blue-gray-900 dark:text-slate-100 mr-2'>
+                {data.subTitle}
+              </div>
+              <div className='text-4xl font-bold text-app-blue-gray-900 px-1.5 '>
+                {data.subTitleValue}
+              </div>
+            </div>
+          )}
+          <div>
             <ul ref={legend} className='flex flex-wrap' />
           </div>
         </div>

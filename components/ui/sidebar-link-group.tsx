@@ -16,7 +16,7 @@ export default function SidebarLinkGroup({
   }
 
   return (
-    <li className={`px-3 py-2 rounded-sm mb-0.5 last:mb-0 group is-link-group ${open && 'bg-app-red-900'}`}>
+    <li className={`pr-3 py-2 rounded-sm mb-0.5 last:mb-0 group is-link-group ${open && 'bg-app-red-900'} list-none`}>
       {children(handleClick, openGroup)}
     </li>
   )

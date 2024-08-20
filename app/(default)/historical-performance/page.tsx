@@ -30,19 +30,37 @@ const chartData = {
   showLabels: false,
 };
 
-const barTopchartData = {
-  labels: ['RS', 'SE', 'IS', 'CM', 'ALF', 'NP'],
-  longLabels: [
-    'Red Solidaria (RS)',
-    'Salud y Educación (SE)',
-    'Infraestructura Social (IS)',
-    'Ciudad Mujer (CM)',
-    'Alfabetización (ALF)',
-    'Nombre Programa (NP)',
+const chartData2 = {
+  labels: ['Norte', 'Central', 'Sur', 'Este', 'Oeste'],
+  datasets: [
+    // Blue bars
+    {
+      label: 'Presupuesto Asignado',
+      data: [1400, 500, 800, 200, 1200],
+      backgroundColor: tailwindConfig.theme.colors.indigo[500],
+      hoverBackgroundColor: tailwindConfig.theme.colors.indigo[600],
+      barPercentage: 0.66,
+      categoryPercentage: 0.66,
+    },
+    // Light blue bars
+    {
+      label: 'Presupuesto Ejecutado',
+      data: [1600, 700, 1000, 400, 1300],
+      backgroundColor: tailwindConfig.theme.colors.blue[400],
+      hoverBackgroundColor: tailwindConfig.theme.colors.blue[500],
+      barPercentage: 0.66,
+      categoryPercentage: 0.66,
+    },
   ],
+  showLabels: true,
+  labelStyle: 'font-semibold text-base',
+};
+
+const barTopchartData = {
+  labels: ['2018', '2019', '2020', '2021', '2022', '2023'],
   datasets: [
     {
-      label: 'Área Urbana',
+      label: 'Proyectos Presupuestados',
       data: [5000, 4000, 4000, 3800, 5200, 5100],
       backgroundColor: tailwindConfig.theme.colors.indigo[700],
       hoverBackgroundColor: tailwindConfig.theme.colors.indigo[800],
@@ -50,7 +68,7 @@ const barTopchartData = {
       categoryPercentage: 0.66,
     },
     {
-      label: 'Área Rural',
+      label: 'Proyectos Ejecutados',
       data: [4800, 4200, 4800, 1800, 3300, 3500],
       backgroundColor: tailwindConfig.theme.colors.indigo[100],
       hoverBackgroundColor: tailwindConfig.theme.colors.indigo[200],
@@ -75,7 +93,7 @@ export default function HistoricalPerformance() {
         <div>
           <SuissBarChart
             title='Presupuesto y Ejecución a lo Largo de los Años (en millones)'
-            chartData={chartData}
+            chartData={chartData2}
           />
         </div>
       </div>

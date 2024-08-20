@@ -85,13 +85,18 @@ export default function SuissBarTopChart({
       {/* Chart built with Chart.js 3 */}
       {/* Change the height attribute to adjust the chart height */}
       <BarChart03 data={data} width={595} height={248} />
-      <footer className='grid grid-cols-3 gap-x-8 gap-y-2 px-5 py-3'>
-        {footerLabels.map((label, index) => (
-          <p key={index} className='text-xs font-normal text-app-blue-gray-500'>
-            {label}
-          </p>
-        ))}
-      </footer>
+      {data.longLabels && (
+        <footer className='grid grid-cols-3 gap-x-5 gap-y-2 px-5 py-3'>
+          {footerLabels.map((label, index) => (
+            <p
+              key={index}
+              className='text-xs font-normal text-app-blue-gray-500'
+            >
+              {label}
+            </p>
+          ))}
+        </footer>
+      )}
     </div>
   );
 }
