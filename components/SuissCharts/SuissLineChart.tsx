@@ -80,17 +80,17 @@ const chartData: ChartData = {
         16, 18, 15, 20, 18, 19, 19, 24, 29, 26, 39, 27, 35, 32, 29, 35, 36, 34,
         39, 36, 41, 41, 48,
       ],
-      borderColor: tailwindConfig.theme.colors.indigo[500],
+      borderColor: tailwindConfig.theme.colors['app-red'][900],
       fill: true,
       backgroundColor: `rgba(${hexToRGB(
-        tailwindConfig.theme.colors.blue[500]
+        tailwindConfig.theme.colors['app-red'][900]
       )}, 0.08)`,
       borderWidth: 2,
       tension: 0,
       pointRadius: 0,
       pointHoverRadius: 3,
-      pointBackgroundColor: tailwindConfig.theme.colors.indigo[500],
-      pointHoverBackgroundColor: tailwindConfig.theme.colors.indigo[500],
+      pointBackgroundColor: tailwindConfig.theme.colors['app-red'][900],
+      pointHoverBackgroundColor: tailwindConfig.theme.colors['app-red'][900],
       pointBorderWidth: 0,
       pointHoverBorderWidth: 0,
       clip: 20,
@@ -103,17 +103,17 @@ const chartData: ChartData = {
         32, 32, 33, 33, 37, 32,
       ],
       borderColor: `rgba(${hexToRGB(
-        tailwindConfig.theme.colors.slate[500]
+        tailwindConfig.theme.colors['app-light-blue'][900]
       )}, 0.25)`,
       borderWidth: 2,
       tension: 0,
       pointRadius: 0,
       pointHoverRadius: 3,
       pointBackgroundColor: `rgba(${hexToRGB(
-        tailwindConfig.theme.colors.slate[500]
+        tailwindConfig.theme.colors['app-light-blue'][900]
       )}, 0.25)`,
       pointHoverBackgroundColor: `rgba(${hexToRGB(
-        tailwindConfig.theme.colors.slate[500]
+        tailwindConfig.theme.colors['app-light-blue'][900]
       )}, 0.25)`,
       pointBorderWidth: 0,
       pointHoverBorderWidth: 0,

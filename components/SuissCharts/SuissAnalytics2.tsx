@@ -11,16 +11,16 @@ const chartData = {
     {
       label: 'Presupuesto',
       data: [8000, 3800, 5350, 7800],
-      backgroundColor: tailwindConfig.theme.colors.indigo[500],
-      hoverBackgroundColor: tailwindConfig.theme.colors.indigo[600],
+      backgroundColor: tailwindConfig.theme.colors['app-red'][900],
+      hoverBackgroundColor: tailwindConfig.theme.colors['app-red'][500],
       categoryPercentage: 0.66,
     },
     // Light blue bars
     {
       label: 'Ejecutado',
       data: [4000, 6500, 2200, 5800],
-      backgroundColor: tailwindConfig.theme.colors.sky[400],
-      hoverBackgroundColor: tailwindConfig.theme.colors.sky[500],
+      backgroundColor: tailwindConfig.theme.colors['app-light-blue'][900],
+      hoverBackgroundColor: tailwindConfig.theme.colors['app-light-blue'][500],
       categoryPercentage: 0.66,
     },
   ],

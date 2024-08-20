@@ -16,21 +16,22 @@ const lineChartData = {
   subTitleValue: '15%',
   labels: ['12-01-2018', '01-01-2023'],
   datasets: [
-    // Indigo line
     {
       label: 'Metas',
       data: [0, 20],
-      borderColor: tailwindConfig.theme.colors.indigo[500],
-      fill: true,
-      backgroundColor: `rgba(${hexToRGB(
-        tailwindConfig.theme.colors.blue[500]
-      )}, 0.08)`,
+      borderColor: `rgba(${hexToRGB(
+        tailwindConfig.theme.colors['app-light-blue'][900]
+      )}, 0.25)`,
       borderWidth: 2,
       tension: 0,
       pointRadius: 0,
       pointHoverRadius: 3,
-      pointBackgroundColor: tailwindConfig.theme.colors.indigo[500],
-      pointHoverBackgroundColor: tailwindConfig.theme.colors.indigo[500],
+      pointBackgroundColor: `rgba(${hexToRGB(
+        tailwindConfig.theme.colors['app-light-blue'][900]
+      )}, 0.25)`,
+      pointHoverBackgroundColor: `rgba(${hexToRGB(
+        tailwindConfig.theme.colors['app-light-blue'][900]
+      )}, 0.25)`,
       pointBorderWidth: 0,
       pointHoverBorderWidth: 0,
       clip: 20,
@@ -39,17 +40,21 @@ const lineChartData = {
       label: 'Realidad',
       data: [0, 17],
       borderColor: `rgba(${hexToRGB(
-        tailwindConfig.theme.colors.slate[500]
+        tailwindConfig.theme.colors['app-red'][900]
       )}, 0.25)`,
+      fill: true,
+      backgroundColor: `rgba(${hexToRGB(
+        tailwindConfig.theme.colors['app-red'][900]
+      )}, 0.08)`,
       borderWidth: 2,
       tension: 0,
       pointRadius: 0,
       pointHoverRadius: 3,
       pointBackgroundColor: `rgba(${hexToRGB(
-        tailwindConfig.theme.colors.slate[500]
+        tailwindConfig.theme.colors['app-red'][900]
       )}, 0.25)`,
       pointHoverBackgroundColor: `rgba(${hexToRGB(
-        tailwindConfig.theme.colors.slate[500]
+        tailwindConfig.theme.colors['app-red'][900]
       )}, 0.25)`,
       pointBorderWidth: 0,
       pointHoverBorderWidth: 0,
@@ -145,8 +150,8 @@ const barChartData = {
     {
       label: 'Beneficiarios',
       data: [1400, 500, 800, 200, 1200],
-      backgroundColor: tailwindConfig.theme.colors.indigo[500],
-      hoverBackgroundColor: tailwindConfig.theme.colors.indigo[600],
+      backgroundColor: tailwindConfig.theme.colors['app-blue'][900],
+      hoverBackgroundColor: tailwindConfig.theme.colors['app-blue'][500],
       barPercentage: 0.66,
       categoryPercentage: 0.66,
     },
@@ -154,8 +159,8 @@ const barChartData = {
     {
       label: 'Porcentaje de Ejecución',
       data: [1600, 700, 1000, 400, 1300],
-      backgroundColor: tailwindConfig.theme.colors.blue[400],
-      hoverBackgroundColor: tailwindConfig.theme.colors.blue[500],
+      backgroundColor: tailwindConfig.theme.colors['app-light-blue'][900],
+      hoverBackgroundColor: tailwindConfig.theme.colors['app-light-blue'][500],
       barPercentage: 0.66,
       categoryPercentage: 0.66,
     },

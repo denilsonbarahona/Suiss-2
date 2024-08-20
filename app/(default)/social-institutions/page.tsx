@@ -102,15 +102,6 @@ const barChartData = {
       barPercentage: 0.66,
       categoryPercentage: 0.66,
     },
-    // Light blue bars
-    {
-      label: 'Porcentaje de Ejecución',
-      data: [1600, 700, 1000, 400, 1300],
-      backgroundColor: tailwindConfig.theme.colors.blue[400],
-      hoverBackgroundColor: tailwindConfig.theme.colors.blue[500],
-      barPercentage: 0.66,
-      categoryPercentage: 0.66,
-    },
   ],
   labelStyle: 'font-semibold text-base',
 };

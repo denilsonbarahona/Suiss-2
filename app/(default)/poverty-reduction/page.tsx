@@ -15,17 +15,8 @@ const chartData = {
     {
       label: '2023',
       data: [1400, 500, 800, 200, 1200],
-      backgroundColor: tailwindConfig.theme.colors.indigo[500],
-      hoverBackgroundColor: tailwindConfig.theme.colors.indigo[600],
-      barPercentage: 0.66,
-      categoryPercentage: 0.66,
-    },
-    // Light blue bars
-    {
-      label: '2024',
-      data: [1600, 700, 1000, 400, 1300],
-      backgroundColor: tailwindConfig.theme.colors.blue[400],
-      hoverBackgroundColor: tailwindConfig.theme.colors.blue[500],
+      backgroundColor: tailwindConfig.theme.colors['app-blue'][900],
+      hoverBackgroundColor: tailwindConfig.theme.colors['app-blue'][500],
       barPercentage: 0.66,
       categoryPercentage: 0.66,
     },
@@ -131,8 +122,8 @@ const barChartData = {
     {
       label: 'Área Urbana',
       data: [1400, 500, 800, 200, 1200],
-      backgroundColor: tailwindConfig.theme.colors.indigo[500],
-      hoverBackgroundColor: tailwindConfig.theme.colors.indigo[600],
+      backgroundColor: tailwindConfig.theme.colors['app-blue'][900],
+      hoverBackgroundColor: tailwindConfig.theme.colors['app-blue'][500],
       barPercentage: 0.66,
       categoryPercentage: 0.66,
     },
@@ -140,8 +131,8 @@ const barChartData = {
     {
       label: 'Área Rural',
       data: [1600, 700, 1000, 400, 1300],
-      backgroundColor: tailwindConfig.theme.colors.blue[400],
-      hoverBackgroundColor: tailwindConfig.theme.colors.blue[500],
+      backgroundColor: tailwindConfig.theme.colors['app-light-blue'][900],
+      hoverBackgroundColor: tailwindConfig.theme.colors['app-light-blue'][500],
       barPercentage: 0.66,
       categoryPercentage: 0.66,
     },
@@ -164,16 +155,16 @@ const barTopchartData = {
     {
       label: 'Área Urbana',
       data: [5000, 4000, 4000, 3800, 5200, 5100],
-      backgroundColor: tailwindConfig.theme.colors.indigo[700],
-      hoverBackgroundColor: tailwindConfig.theme.colors.indigo[800],
+      backgroundColor: tailwindConfig.theme.colors['app-red'][900],
+      hoverBackgroundColor: tailwindConfig.theme.colors['app-red'][500],
       barPercentage: 0.66,
       categoryPercentage: 0.66,
     },
     {
       label: 'Área Rural',
       data: [4800, 4200, 4800, 1800, 3300, 3500],
-      backgroundColor: tailwindConfig.theme.colors.indigo[100],
-      hoverBackgroundColor: tailwindConfig.theme.colors.indigo[200],
+      backgroundColor: tailwindConfig.theme.colors['app-red'][500],
+      hoverBackgroundColor: tailwindConfig.theme.colors['app-red'][900],
       barPercentage: 0.66,
       categoryPercentage: 0.66,
     },
@@ -201,7 +192,7 @@ export default function PovertyReduction() {
       </div>
       <div className='flex flex-col lg:flex-row gap-8 mt-8 mb-8'>
         <div className='w-full lg:w-3/4 bg-white dark:bg-slate-800 rounded-3xl py-4 px-2'>
-          <Map title='Regiones con tasas de pobreza' />
+          <Map title='Regiones con tasas de pobreza' choroplethMap />
         </div>
         <div className='w-full lg:w-1/4'>
           <DashboardCard06

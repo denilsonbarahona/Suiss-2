@@ -13,17 +13,8 @@ const chartData = {
     {
       label: '2023',
       data: [1400, 500, 800, 200, 1200],
-      backgroundColor: tailwindConfig.theme.colors.indigo[500],
+      backgroundColor: tailwindConfig.theme.colors['app-red'][900],
       hoverBackgroundColor: tailwindConfig.theme.colors.indigo[600],
-      barPercentage: 0.66,
-      categoryPercentage: 0.66,
-    },
-    // Light blue bars
-    {
-      label: '2024',
-      data: [1600, 700, 1000, 400, 1300],
-      backgroundColor: tailwindConfig.theme.colors.blue[400],
-      hoverBackgroundColor: tailwindConfig.theme.colors.blue[500],
       barPercentage: 0.66,
       categoryPercentage: 0.66,
     },
@@ -84,17 +75,17 @@ const lineChartData = {
         16, 18, 15, 20, 18, 19, 19, 24, 29, 26, 39, 27, 35, 32, 29, 35, 36, 34,
         39, 36, 41, 41, 48,
       ],
-      borderColor: tailwindConfig.theme.colors.indigo[500],
+      borderColor: tailwindConfig.theme.colors['app-light-blue'][900],
       fill: true,
       backgroundColor: `rgba(${hexToRGB(
-        tailwindConfig.theme.colors.blue[500]
+        tailwindConfig.theme.colors['app-light-blue'][900]
       )}, 0.08)`,
       borderWidth: 2,
       tension: 0,
       pointRadius: 0,
       pointHoverRadius: 3,
-      pointBackgroundColor: tailwindConfig.theme.colors.indigo[500],
-      pointHoverBackgroundColor: tailwindConfig.theme.colors.indigo[500],
+      pointBackgroundColor: tailwindConfig.theme.colors['app-light-blue'][900],
+      pointHoverBackgroundColor: tailwindConfig.theme.colors['app-light-blue'][900],
       pointBorderWidth: 0,
       pointHoverBorderWidth: 0,
       clip: 20,
@@ -107,17 +98,17 @@ const lineChartData = {
         32, 32, 33, 33, 37, 32,
       ],
       borderColor: `rgba(${hexToRGB(
-        tailwindConfig.theme.colors.slate[500]
+        tailwindConfig.theme.colors['app-blue'][900]
       )}, 0.25)`,
       borderWidth: 2,
       tension: 0,
       pointRadius: 0,
       pointHoverRadius: 3,
       pointBackgroundColor: `rgba(${hexToRGB(
-        tailwindConfig.theme.colors.slate[500]
+        tailwindConfig.theme.colors['app-blue'][900]
       )}, 0.25)`,
       pointHoverBackgroundColor: `rgba(${hexToRGB(
-        tailwindConfig.theme.colors.slate[500]
+        tailwindConfig.theme.colors['app-blue'][900]
       )}, 0.25)`,
       pointBorderWidth: 0,
       pointHoverBorderWidth: 0,
@@ -133,16 +124,16 @@ const analyticsChartData = {
     {
       label: 'Hombres',
       data: [8000, 3800, 5350, 7800],
-      backgroundColor: tailwindConfig.theme.colors.indigo[500],
-      hoverBackgroundColor: tailwindConfig.theme.colors.indigo[600],
+      backgroundColor: tailwindConfig.theme.colors['app-red'][900],
+      hoverBackgroundColor: tailwindConfig.theme.colors['app-red'][500],
       categoryPercentage: 0.66,
     },
     // Light blue bars
     {
       label: 'Mujeres',
       data: [4000, 6500, 2200, 5800],
-      backgroundColor: tailwindConfig.theme.colors.sky[400],
-      hoverBackgroundColor: tailwindConfig.theme.colors.sky[500],
+      backgroundColor: tailwindConfig.theme.colors['app-light-blue'][900],
+      hoverBackgroundColor: tailwindConfig.theme.colors['app-light-blue'][500],
       categoryPercentage: 0.66,
     },
   ],
@@ -164,15 +155,21 @@ export default function Population() {
           />
         </div>
         <div>
-          <SuissLineChart title='Evolución del Ingreso per Cápita' data={lineChartData} />
+          <SuissLineChart
+            title='Evolución del Ingreso per Cápita'
+            data={lineChartData}
+          />
         </div>
       </div>
       <div className='flex flex-col lg:flex-row gap-8 mt-8 mb-8'>
         <div className='w-full lg:w-1/2'>
-          <SuissAnalytics2  title='Distribución de la Población por Edad y Género' data={analyticsChartData}/>
+          <SuissAnalytics2
+            title='Distribución de la Población por Edad y Género'
+            data={analyticsChartData}
+          />
         </div>
         <div className='w-full lg:w-1/2 bg-white dark:bg-slate-800 rounded-3xl'>
-          <Map title='Mapa de población' />
+          <Map title='Mapa de población' bubbleMap />
         </div>
       </div>
     </div>

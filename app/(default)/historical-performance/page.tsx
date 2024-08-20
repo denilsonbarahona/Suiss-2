@@ -12,17 +12,8 @@ const chartData = {
     {
       label: '2023',
       data: [1400, 500, 800, 200, 1200],
-      backgroundColor: tailwindConfig.theme.colors.indigo[500],
-      hoverBackgroundColor: tailwindConfig.theme.colors.indigo[600],
-      barPercentage: 0.66,
-      categoryPercentage: 0.66,
-    },
-    // Light blue bars
-    {
-      label: '2024',
-      data: [1600, 700, 1000, 400, 1300],
-      backgroundColor: tailwindConfig.theme.colors.blue[400],
-      hoverBackgroundColor: tailwindConfig.theme.colors.blue[500],
+      backgroundColor: tailwindConfig.theme.colors['app-red'][900],
+      hoverBackgroundColor: tailwindConfig.theme.colors['app-red'][500],
       barPercentage: 0.66,
       categoryPercentage: 0.66,
     },
@@ -37,8 +28,8 @@ const chartData2 = {
     {
       label: 'Presupuesto Asignado',
       data: [1400, 500, 800, 200, 1200],
-      backgroundColor: tailwindConfig.theme.colors.indigo[500],
-      hoverBackgroundColor: tailwindConfig.theme.colors.indigo[600],
+      backgroundColor: tailwindConfig.theme.colors['app-blue'][900],
+      hoverBackgroundColor: tailwindConfig.theme.colors['app-blue'][500],
       barPercentage: 0.66,
       categoryPercentage: 0.66,
     },
@@ -46,8 +37,8 @@ const chartData2 = {
     {
       label: 'Presupuesto Ejecutado',
       data: [1600, 700, 1000, 400, 1300],
-      backgroundColor: tailwindConfig.theme.colors.blue[400],
-      hoverBackgroundColor: tailwindConfig.theme.colors.blue[500],
+      backgroundColor: tailwindConfig.theme.colors['app-light-blue'][900],
+      hoverBackgroundColor: tailwindConfig.theme.colors['app-light-blue'][500],
       barPercentage: 0.66,
       categoryPercentage: 0.66,
     },
@@ -62,16 +53,16 @@ const barTopchartData = {
     {
       label: 'Proyectos Presupuestados',
       data: [5000, 4000, 4000, 3800, 5200, 5100],
-      backgroundColor: tailwindConfig.theme.colors.indigo[700],
-      hoverBackgroundColor: tailwindConfig.theme.colors.indigo[800],
+      backgroundColor: tailwindConfig.theme.colors['app-light-blue'][900],
+      hoverBackgroundColor: tailwindConfig.theme.colors['app-light-blue'][900],
       barPercentage: 0.66,
       categoryPercentage: 0.66,
     },
     {
       label: 'Proyectos Ejecutados',
       data: [4800, 4200, 4800, 1800, 3300, 3500],
-      backgroundColor: tailwindConfig.theme.colors.indigo[100],
-      hoverBackgroundColor: tailwindConfig.theme.colors.indigo[200],
+      backgroundColor: tailwindConfig.theme.colors['app-light-blue'][500],
+      hoverBackgroundColor: tailwindConfig.theme.colors['app-light-blue'][500],
       barPercentage: 0.66,
       categoryPercentage: 0.66,
     },
@@ -105,7 +96,7 @@ export default function HistoricalPerformance() {
           />
         </div>
         <div className='w-full bg-white dark:bg-slate-800 rounded-3xl'>
-          <Map title='Mapa de Desempeño Histórico de Programas' />
+          <Map title='Mapa de Desempeño Histórico de Programas' bubbleMap />
         </div>
       </div>
     </div>
