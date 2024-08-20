@@ -2,32 +2,6 @@
 
 import Map from '@/components/SuissCharts/Map';
 import SuissTable from '@/components/SuissTables/SuissTable';
-import { tailwindConfig } from '@/components/utils/utils';
-
-const chartData = {
-  labels: ['Norte', 'Central', 'Sur', 'Este', 'Oeste'],
-  datasets: [
-    // Blue bars
-    {
-      label: '2023',
-      data: [1400, 500, 800, 200, 1200],
-      backgroundColor: tailwindConfig.theme.colors.indigo[500],
-      hoverBackgroundColor: tailwindConfig.theme.colors.indigo[600],
-      barPercentage: 0.66,
-      categoryPercentage: 0.66,
-    },
-    // Light blue bars
-    {
-      label: '2024',
-      data: [1600, 700, 1000, 400, 1300],
-      backgroundColor: tailwindConfig.theme.colors.blue[400],
-      hoverBackgroundColor: tailwindConfig.theme.colors.blue[500],
-      barPercentage: 0.66,
-      categoryPercentage: 0.66,
-    },
-  ],
-  showLabels: false,
-};
 
 const tableData = {
   title: 'Análisis de Indicadores',
@@ -90,7 +64,7 @@ export default function ExecutionAndBudget() {
           <SuissTable data={tableData} />
         </div>
         <div className='w-full bg-white dark:bg-slate-800 rounded-3xl'>
-          <Map title='Mapa de Desempeño Histórico de Programas' />
+          <Map title='Mapa de Desempeño Histórico de Programas' bubbleMap/>
         </div>
       </div>
     </div>

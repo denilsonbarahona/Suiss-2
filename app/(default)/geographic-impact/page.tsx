@@ -21,15 +21,6 @@ const chartData = {
       barPercentage: 0.66,
       categoryPercentage: 0.66,
     },
-    // Light blue bars
-    {
-      label: '2024',
-      data: [1600, 700, 1000, 400, 1300],
-      backgroundColor: tailwindConfig.theme.colors.blue[400],
-      hoverBackgroundColor: tailwindConfig.theme.colors.blue[500],
-      barPercentage: 0.66,
-      categoryPercentage: 0.66,
-    },
   ],
   showLabels: false,
 };
@@ -87,17 +78,17 @@ const lineChartData = {
         16, 18, 15, 20, 18, 19, 19, 24, 29, 26, 39, 27, 35, 32, 29, 35, 36, 34,
         39, 36, 41, 41, 48,
       ],
-      borderColor: tailwindConfig.theme.colors.indigo[500],
+      borderColor: tailwindConfig.theme.colors['app-light-blue'][900],
       fill: true,
       backgroundColor: `rgba(${hexToRGB(
-        tailwindConfig.theme.colors.blue[500]
+        tailwindConfig.theme.colors['app-light-blue'][900]
       )}, 0.08)`,
       borderWidth: 2,
       tension: 0,
       pointRadius: 0,
       pointHoverRadius: 3,
-      pointBackgroundColor: tailwindConfig.theme.colors.indigo[500],
-      pointHoverBackgroundColor: tailwindConfig.theme.colors.indigo[500],
+      pointBackgroundColor: tailwindConfig.theme.colors['app-light-blue'][900],
+      pointHoverBackgroundColor: tailwindConfig.theme.colors['app-light-blue'][900],
       pointBorderWidth: 0,
       pointHoverBorderWidth: 0,
       clip: 20,
@@ -110,17 +101,17 @@ const lineChartData = {
         32, 32, 33, 33, 37, 32,
       ],
       borderColor: `rgba(${hexToRGB(
-        tailwindConfig.theme.colors.slate[500]
+        tailwindConfig.theme.colors['app-blue'][900],
       )}, 0.25)`,
       borderWidth: 2,
       tension: 0,
       pointRadius: 0,
       pointHoverRadius: 3,
       pointBackgroundColor: `rgba(${hexToRGB(
-        tailwindConfig.theme.colors.slate[500]
+        tailwindConfig.theme.colors['app-blue'][900],
       )}, 0.25)`,
       pointHoverBackgroundColor: `rgba(${hexToRGB(
-        tailwindConfig.theme.colors.slate[500]
+        tailwindConfig.theme.colors['app-blue'][900],
       )}, 0.25)`,
       pointBorderWidth: 0,
       pointHoverBorderWidth: 0,
@@ -447,18 +438,9 @@ const barChartData = {
       barPercentage: 0.66,
       categoryPercentage: 0.66,
     },
-    // Light blue bars
-    {
-      label: 'Área Rural',
-      data: [1600, 700, 1000, 400, 1300],
-      backgroundColor: tailwindConfig.theme.colors.blue[400],
-      hoverBackgroundColor: tailwindConfig.theme.colors.blue[500],
-      barPercentage: 0.66,
-      categoryPercentage: 0.66,
-    },
   ],
   labelStyle: 'font-semibold text-base',
-  showLabels: true,
+  showLabels: false,
 };
 
 const bottomChartData = {
@@ -475,8 +457,8 @@ const bottomChartData = {
     {
       label: 'Cobertura',
       data: [6200, 9200, 6600, 8800, 5200, 9200],
-      backgroundColor: tailwindConfig.theme.colors.indigo[500],
-      hoverBackgroundColor: tailwindConfig.theme.colors.indigo[600],
+      backgroundColor: tailwindConfig.theme.colors['app-light-blue'][900],
+      hoverBackgroundColor: tailwindConfig.theme.colors['app-light-blue'][900],
       barPercentage: 0.66,
       categoryPercentage: 0.66,
     },
@@ -484,8 +466,8 @@ const bottomChartData = {
     {
       label: 'Sin Cobertura',
       data: [-4000, -2600, -5350, -4000, -7500, -2000],
-      backgroundColor: tailwindConfig.theme.colors.indigo[200],
-      hoverBackgroundColor: tailwindConfig.theme.colors.indigo[300],
+      backgroundColor: tailwindConfig.theme.colors['app-light-blue'][500],
+      hoverBackgroundColor: tailwindConfig.theme.colors['app-light-blue'][500],
       barPercentage: 0.66,
       categoryPercentage: 0.66,
     },
@@ -519,7 +501,10 @@ export default function GeographicImpact() {
           />
         </div>
         <div className='w-full lg:w-2/3 bg-white dark:bg-slate-800 rounded-3xl py-4 px-2'>
-          <Map title='Indicador Geográfico: Acceso a Agua Potable' />
+          <Map
+            title='Indicador Geográfico: Acceso a Agua Potable'
+            choroplethMap
+          />
         </div>
       </div>
       <div className='grid grid-cols-1 gap-6 mb-6'>
@@ -528,7 +513,7 @@ export default function GeographicImpact() {
       <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
         <div>
           <SuissBarChart
-            title='Comparación de la pobreza en áreas urbanas y rurales'
+            title='Impacto de Intervenciones en Aldeas'
             chartData={barChartData}
           />
         </div>
@@ -544,7 +529,7 @@ export default function GeographicImpact() {
           />
         </div>
         <div className='w-full  lg:w-1/2 bg-white dark:bg-slate-800 rounded-3xl py-4 px-2'>
-          <Map title='Mapa de Zonas de Riesgo en Aldeas' />
+          <Map title='Mapa de Zonas de Riesgo en Aldeas' bubbleMap />
         </div>
       </div>
       <div>

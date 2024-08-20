@@ -11,8 +11,8 @@ const chartData = {
     {
       label: 'Presupuesto Asignado',
       data: [1400, 500, 800, 200, 1200, 1000, 1500],
-      backgroundColor: tailwindConfig.theme.colors.indigo[500],
-      hoverBackgroundColor: tailwindConfig.theme.colors.indigo[600],
+      backgroundColor: tailwindConfig.theme.colors['app-blue'][900],
+      hoverBackgroundColor: tailwindConfig.theme.colors['app-blue'][500],
       barPercentage: 0.66,
       categoryPercentage: 0.66,
     },
@@ -20,8 +20,8 @@ const chartData = {
     {
       label: 'Presupuesto Ejecutado',
       data: [1600, 700, 1000, 400, 1300, 1000, 1500],
-      backgroundColor: tailwindConfig.theme.colors.blue[400],
-      hoverBackgroundColor: tailwindConfig.theme.colors.blue[500],
+      backgroundColor: tailwindConfig.theme.colors['app-light-blue'][900],
+      hoverBackgroundColor: tailwindConfig.theme.colors['app-light-blue'][500], 
       barPercentage: 0.66,
       categoryPercentage: 0.66,
     },
