@@ -31,8 +31,12 @@ Chart.register(
   Legend
 );
 
+interface ExtendedChartData extends ChartData {
+  labelStyle?: string;
+}
+
 interface BarChartProps {
-  data: ChartData;
+  data: ExtendedChartData;
   width: number;
   height: number;
 }

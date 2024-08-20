@@ -3,15 +3,86 @@
 import { useRouter } from 'next/navigation';
 import { dataTable } from '../page';
 import Datepicker from '@/components/datepicker';
-import SuissTimeLineChart from '@/components/SuissCharts/suissTimelineChart';
 import DashboardCard06 from '../../dashboard/dashboard-card-06';
 import SuissAnalytics from '@/components/SuissCharts/SuissAnalytics';
 import SuissAnalytics2 from '@/components/SuissCharts/SuissAnalytics2';
 import SuissBarChart from '@/components/SuissCharts/suissBarChart';
 import { tailwindConfig } from '@/components/utils/utils';
+import SuissLineChart from '@/components/SuissCharts/SuissLineChart';
+import { hexToRGB } from '@/components/utils/utils';
+
+const lineChartData = {
+  subTitle: 'Reducción del índice de pobreza',
+  subTitleValue: '15%',
+  labels: ['12-01-2018', '01-01-2023'],
+  datasets: [
+    // Indigo line
+    {
+      label: 'Metas',
+      data: [0, 20],
+      borderColor: tailwindConfig.theme.colors.indigo[500],
+      fill: true,
+      backgroundColor: `rgba(${hexToRGB(
+        tailwindConfig.theme.colors.blue[500]
+      )}, 0.08)`,
+      borderWidth: 2,
+      tension: 0,
+      pointRadius: 0,
+      pointHoverRadius: 3,
+      pointBackgroundColor: tailwindConfig.theme.colors.indigo[500],
+      pointHoverBackgroundColor: tailwindConfig.theme.colors.indigo[500],
+      pointBorderWidth: 0,
+      pointHoverBorderWidth: 0,
+      clip: 20,
+    },
+    {
+      label: 'Realidad',
+      data: [0, 17],
+      borderColor: `rgba(${hexToRGB(
+        tailwindConfig.theme.colors.slate[500]
+      )}, 0.25)`,
+      borderWidth: 2,
+      tension: 0,
+      pointRadius: 0,
+      pointHoverRadius: 3,
+      pointBackgroundColor: `rgba(${hexToRGB(
+        tailwindConfig.theme.colors.slate[500]
+      )}, 0.25)`,
+      pointHoverBackgroundColor: `rgba(${hexToRGB(
+        tailwindConfig.theme.colors.slate[500]
+      )}, 0.25)`,
+      pointBorderWidth: 0,
+      pointHoverBorderWidth: 0,
+      clip: 20,
+    },
+  ],
+};
+
+const donutChartData = {
+  labels: ['<18', '18-24', '24-34', '>35'],
+  datasets: [
+    {
+      label: 'Top Countries',
+      data: [20, 40, 10, 30],
+      backgroundColor: [
+        tailwindConfig.theme.colors['app-indigo'][900],
+        tailwindConfig.theme.colors['app-light-blue'][900],
+        tailwindConfig.theme.colors['app-blue'][900],
+        tailwindConfig.theme.colors['app-amber'][900],
+      ],
+      hoverBackgroundColor: [
+        tailwindConfig.theme.colors['app-indigo'][900],
+        tailwindConfig.theme.colors['app-light-blue'][900],
+        tailwindConfig.theme.colors['app-blue'][900],
+        tailwindConfig.theme.colors['app-amber'][900],
+      ],
+      borderWidth: 0,
+    },
+  ],
+};
 
 const dataAnalytics = {
-  title: 'Top Channels',
+  title: 'Presupuesto y Financiación',
   headers: ['Tipo', 'Monto'],
   rows: [
     {
@@ -146,8 +217,15 @@ export default function SocialProgram() {
         </div>
       </div>
       <div className='grid grid-cols-12 gap-6 mb-6'>
-        <SuissTimeLineChart title='Metas vs. Realidad a lo largo del tiempo.' />
-        <DashboardCard06 size='col-span-full xl:col-span-4' />
+        <SuissLineChart
+          title='Metas vs. Realidad a lo largo del tiempo.'
+          data={lineChartData}
+        />
+        <DashboardCard06
+          size='col-span-full xl:col-span-4'
+          title='Distribución Demográfica de los Beneficiarios'
+          data={donutChartData}
+        />
       </div>
       <div className='grid grid-cols-12 gap-6 mb-6'>
         <SuissAnalytics data={dataAnalytics} />

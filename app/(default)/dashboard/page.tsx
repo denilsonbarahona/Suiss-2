@@ -5,6 +5,8 @@ import SuissBarChart from '@/components/SuissCharts/suissBarChart';
 import SuissCakeChart from '@/components/SuissCharts/SuissCakeChart';
 import DashboardReports from '@/components/cards/dashboardReports';
 import ExecutionReportIcon from '@/components/icons/ExecutionReport';
+import PerformanceReportIcon from '@/components/icons/PerformanceReport';
+import BeneficiariesReportIcon from '@/components/icons/BeneficiariesReport';
 
 const dashboardReports = [
   {
@@ -17,13 +19,13 @@ const dashboardReports = [
     title: 'Informe de Desempeño',
     description:
       'Evaluaciones de impacto y resultados obtenidos por los programas.',
-    icon: ExecutionReportIcon,
+    icon: PerformanceReportIcon,
   },
   {
     title: 'Informe de Beneficiarios',
     description:
       'Información sobre la cantidad de personas beneficiadas y sus características.',
-    icon: ExecutionReportIcon,
+    icon: BeneficiariesReportIcon,
   },
 ];
 
