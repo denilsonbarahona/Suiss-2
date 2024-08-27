@@ -58,7 +58,7 @@ const dataTable2 = {
       title: "Cumplimiento de Metas",
     },
     {
-      title: "Beneficiarios Atendidos",
+      title: "Monto Ejecutado",
     },
   ],
   rows: [
