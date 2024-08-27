@@ -241,7 +241,7 @@ export default function GovernmentAreas() {
       <div className="grid grid-cols-12 gap-6">
         <SuissTable data={dataTable} />
         <DashboardCard06 />
-        <div className="w-full col-span-12 flex flex-col lg:flex-row gap-3 lg:gap-0">
+        {/* <div className="w-full col-span-12 flex flex-col lg:flex-row gap-3 lg:gap-0">
           <h1 className="w-full text-3xl text-center lg:text-start text-slate-800 dark:text-slate-100 font-bold">
             Listado de Áreas de Acción del Gobierno
           </h1>
@@ -265,10 +265,10 @@ export default function GovernmentAreas() {
               Buscar
             </button>
           </span>
-        </div>
+        </div> */}
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8 mt-8">
+      {/*  <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8 mt-8">
         {governmentActionAreas.map((area, index) => (
           <div key={index} className="grid-cols-4">
             <GovernmentActionAreas
@@ -278,7 +278,7 @@ export default function GovernmentAreas() {
             />
           </div>
         ))}
-      </div>
+      </div> */}
     </div>
   );
 }

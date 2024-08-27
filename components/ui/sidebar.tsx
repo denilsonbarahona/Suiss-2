@@ -41,11 +41,11 @@ const sideBarOptions = [
     href: "/social-institutions",
     icon: SocialInstitutionIcon,
   },
-  {
+  /* {
     name: "Sistemas Integrados",
     href: "/integrated-systems",
     icon: IntegrationIcon,
-  },
+  }, */
   /*   {
     name: "Reducción de la Pobreza",
     href: "/poverty-reduction",
@@ -76,11 +76,11 @@ const sideBarOptions = [
     href: '/economic-indicators',
     icon: EconomicIcon,
   }, */
-  {
+  /* {
     name: "Fuentes de Financiamiento",
     href: "/financing-sources",
     icon: FinancingIcon,
-  },
+  }, */
 ];
 
 export default function Sidebar() {

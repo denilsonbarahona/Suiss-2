@@ -38,14 +38,14 @@ export default function Dashboard() {
       <div className="grid grid-cols-12 gap-6">
         <SuissBarChart />
         <SuissCakeChart />
-        {dashboardReports.map((report, index) => (
+        {/* {dashboardReports.map((report, index) => (
           <DashboardReports
             key={index}
             title={report.title}
             description={report.description}
             Icon={report.icon}
           ></DashboardReports>
-        ))}
+        ))} */}
       </div>
     </div>
   );
