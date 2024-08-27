@@ -63,40 +63,55 @@ const dataTable2 = {
   ],
   rows: [
     {
-      title: "Secretaría de Desarrollo Social (SEDESOL)",
-      percentage: "85%",
-      beneficiaries: "150,000",
+      title: "Instituto Hondureño de Seguridad Social (IHSS)",
+      percentage: "30.30%",
+      beneficiaries: "10,563,971,612",
     },
     {
-      title: "Secretaría de Salud (SESAL)",
-      percentage: "85%",
-      beneficiaries: "150,000",
+      title: "Secretaría de Infraestructura y Transporte",
+      percentage: "44.42%",
+      beneficiaries: "7,514,091,223",
+    },
+    {
+      title: "Banco Nacional de Desarrollo Agrícola",
+      percentage: "5.43%",
+      beneficiaries: "236,459,931",
     },
     {
       title: "Secretaría de Educación (SEDUC)",
-      percentage: "85%",
-      beneficiaries: "150,000",
+      percentage: "52.42%",
+      beneficiaries: "2,143,483,131",
     },
     {
-      title: "Instituto Hondureño de Seguridad Social (IHSS)",
-      percentage: "85%",
-      beneficiaries: "150,000",
+      title: "Programa de Acción Solidaria (PROASOL)",
+      percentage: "59.80%",
+      beneficiaries: "1,808,875,040",
     },
     {
-      title: "Secretaría de Trabajo y Seguridad Social(SETASS)",
-      percentage: "85%",
-      beneficiaries: "150,000",
+      title: "Fondo Hondureño de Inversión Social",
+      percentage: "35.52%",
+      beneficiaries: "847,747,281.5",
+    },
+    {
+      title: "Red Solidaria",
+      percentage: "35.94%",
+      beneficiaries: "817,011,525.7",
+    },
+    {
+      title: "Secretaría de Salud (SESAL)",
+      percentage: "33.44%",
+      beneficiaries: "535,438,759.1",
     },
   ],
 };
 
 const barChartData = {
-  labels: ["Norte (N)", "Central (C)", "Sus (S)", "Este (E)", "Oeste (O)"],
+  labels: ["Centro", "Este", "Norte", "Oeste", "Sur"],
   datasets: [
     // Blue bars
     {
       label: "Beneficiarios",
-      data: [1400, 500, 800, 200, 1200],
+      data: [711900180, 529041020, 367013540, 231576120, 307752160],
       backgroundColor: tailwindConfig.theme.colors.indigo[500],
       hoverBackgroundColor: tailwindConfig.theme.colors.indigo[600],
       barPercentage: 0.66,

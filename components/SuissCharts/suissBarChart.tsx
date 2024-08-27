@@ -33,7 +33,9 @@ const chartDataDefault = {
     // Blue bars
     {
       label: "2023",
-      data: [1639.96, 17671.57, 2542.81, 2000.0, 2328.23],
+      data: [
+        1639963398.72, 17671572591.0, 2542811204.0, 2000000000.0, 2328233715.55,
+      ],
       backgroundColor: tailwindConfig.theme.colors["app-light-blue"][900],
       hoverBackgroundColor: tailwindConfig.theme.colors["app-light-blue"][500],
       barPercentage: 0.66,
@@ -42,7 +44,9 @@ const chartDataDefault = {
     // Light blue bars
     {
       label: "2024",
-      data: [1384.71, 17195.75, 14374.18, 2358.09, 1761.09],
+      data: [
+        1384705805, 17195750055.0, 14374182033.0, 2358094950.0, 1761090158.58,
+      ],
       backgroundColor: tailwindConfig.theme.colors["app-blue"][900],
       hoverBackgroundColor: tailwindConfig.theme.colors["app-blue"][500],
       barPercentage: 0.66,
