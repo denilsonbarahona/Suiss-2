@@ -183,7 +183,7 @@ export default function SocialPrograms() {
           <h1 className="w-full text-3xl text-center lg:text-start text-slate-800 dark:text-slate-100 font-bold">
             Listado de Programas Sociales
           </h1>
-          <span className="flex items-center justify-center flex-col lg:flex-row gap-2">
+          {/*  <span className="flex items-center justify-center flex-col lg:flex-row gap-2">
             <SearchForm
               placeholder="Buscar por institución"
               className="w-full lg:w-auto [&>input]:w-full [&>input]:lg:w-auto"
@@ -202,13 +202,13 @@ export default function SocialPrograms() {
               </svg>
               Buscar
             </button>
-          </span>
+          </span> */}
         </div>
       </div>
       <div className="flex flex-col xl:flex-row justify-between gap-6">
-        <div className="w-full xl:w-1/4">
+        {/* <div className="w-full xl:w-1/4">
           <FilterSidebar actionAreas={socialPrograms} />
-        </div>
+        </div> */}
         <div className="w-full xl:w-3/4">
           <SuissTable data={dataTable} />
         </div>

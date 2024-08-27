@@ -1,83 +1,83 @@
-'use client';
+"use client";
 
-import IntegratedSystemCard from '@/components/cards/integratedSystemCard';
-import SearchForm from '@/components/search-form';
+import IntegratedSystemCard from "@/components/cards/integratedSystemCard";
+import SearchForm from "@/components/search-form";
 
 const cards = [
   {
-    date: 'Vie 1 Jul 2024',
-    subTitle: '50,000 registros de intervenciones',
-    title: 'Sistema de Monitoreo de Intervenciones del Sector Salud',
+    date: "Vie 1 Jul 2024",
+    subTitle: "50,000 registros de intervenciones",
+    title: "Sistema de Monitoreo de Intervenciones del Sector Salud",
     description:
-      'Monitorea las intervenciones de salud pública y evalúa su efectividad en la población.',
-    footer: 'Ministerio de Salud',
+      "Monitorea las intervenciones de salud pública y evalúa su efectividad en la población.",
+    footer: "Ministerio de Salud",
   },
   {
-    date: 'Vie 1 Jul 2024',
-    subTitle: '50,000 registros de intervenciones',
-    title: 'Sistema de Monitoreo de Intervenciones del Sector Salud',
+    date: "Vie 1 Jul 2024",
+    subTitle: "50,000 registros de intervenciones",
+    title: "Sistema de Monitoreo de Intervenciones del Sector Salud",
     description:
-      'Monitorea las intervenciones de salud pública y evalúa su efectividad en la población.',
-    footer: 'Ministerio de Salud',
+      "Monitorea las intervenciones de salud pública y evalúa su efectividad en la población.",
+    footer: "Ministerio de Salud",
   },
   {
-    date: 'Vie 1 Jul 2024',
-    subTitle: '50,000 registros de intervenciones',
-    title: 'Sistema de Monitoreo de Intervenciones del Sector Salud',
+    date: "Vie 1 Jul 2024",
+    subTitle: "50,000 registros de intervenciones",
+    title: "Sistema de Monitoreo de Intervenciones del Sector Salud",
     description:
-      'Monitorea las intervenciones de salud pública y evalúa su efectividad en la población.',
-    footer: 'Ministerio de Salud',
+      "Monitorea las intervenciones de salud pública y evalúa su efectividad en la población.",
+    footer: "Ministerio de Salud",
   },
   {
-    date: 'Vie 1 Jul 2024',
-    subTitle: '50,000 registros de intervenciones',
-    title: 'Sistema de Monitoreo de Intervenciones del Sector Salud',
+    date: "Vie 1 Jul 2024",
+    subTitle: "50,000 registros de intervenciones",
+    title: "Sistema de Monitoreo de Intervenciones del Sector Salud",
     description:
-      'Monitorea las intervenciones de salud pública y evalúa su efectividad en la población.',
-    footer: 'Ministerio de Salud',
+      "Monitorea las intervenciones de salud pública y evalúa su efectividad en la población.",
+    footer: "Ministerio de Salud",
   },
   {
-    date: 'Vie 1 Jul 2024',
-    subTitle: '50,000 registros de intervenciones',
-    title: 'Sistema de Monitoreo de Intervenciones del Sector Salud',
+    date: "Vie 1 Jul 2024",
+    subTitle: "50,000 registros de intervenciones",
+    title: "Sistema de Monitoreo de Intervenciones del Sector Salud",
     description:
-      'Monitorea las intervenciones de salud pública y evalúa su efectividad en la población.',
-    footer: 'Ministerio de Salud',
+      "Monitorea las intervenciones de salud pública y evalúa su efectividad en la población.",
+    footer: "Ministerio de Salud",
   },
   {
-    date: 'Vie 1 Jul 2024',
-    subTitle: '50,000 registros de intervenciones',
-    title: 'Sistema de Monitoreo de Intervenciones del Sector Salud',
+    date: "Vie 1 Jul 2024",
+    subTitle: "50,000 registros de intervenciones",
+    title: "Sistema de Monitoreo de Intervenciones del Sector Salud",
     description:
-      'Monitorea las intervenciones de salud pública y evalúa su efectividad en la población.',
-    footer: 'Ministerio de Salud',
+      "Monitorea las intervenciones de salud pública y evalúa su efectividad en la población.",
+    footer: "Ministerio de Salud",
   },
   {
-    date: 'Vie 1 Jul 2024',
-    subTitle: '50,000 registros de intervenciones',
-    title: 'Sistema de Monitoreo de Intervenciones del Sector Salud',
+    date: "Vie 1 Jul 2024",
+    subTitle: "50,000 registros de intervenciones",
+    title: "Sistema de Monitoreo de Intervenciones del Sector Salud",
     description:
-      'Monitorea las intervenciones de salud pública y evalúa su efectividad en la población.',
-    footer: 'Ministerio de Salud',
+      "Monitorea las intervenciones de salud pública y evalúa su efectividad en la población.",
+    footer: "Ministerio de Salud",
   },
   {
-    date: 'Vie 1 Jul 2024',
-    subTitle: '50,000 registros de intervenciones',
-    title: 'Sistema de Monitoreo de Intervenciones del Sector Salud',
+    date: "Vie 1 Jul 2024",
+    subTitle: "50,000 registros de intervenciones",
+    title: "Sistema de Monitoreo de Intervenciones del Sector Salud",
     description:
-      'Monitorea las intervenciones de salud pública y evalúa su efectividad en la población.',
-    footer: 'Ministerio de Salud',
+      "Monitorea las intervenciones de salud pública y evalúa su efectividad en la población.",
+    footer: "Ministerio de Salud",
   },
 ];
 
 export default function IntegratedSystems() {
   return (
-    <div className='px-4 sm:px-6 lg:px-8 py-8 w-full max-w-[96rem] mx-auto'>
-      <div className='w-full col-span-12 flex flex-col lg:flex-row gap-3 lg:gap-0 mb-8'>
-        <h1 className='w-full text-3xl text-center lg:text-start text-slate-800 dark:text-slate-100 font-bold'>
+    <div className="px-4 sm:px-6 lg:px-8 py-8 w-full max-w-[96rem] mx-auto">
+      <div className="w-full col-span-12 flex flex-col lg:flex-row gap-3 lg:gap-0 mb-8">
+        <h1 className="w-full text-3xl text-center lg:text-start text-slate-800 dark:text-slate-100 font-bold">
           Sistemas Integrados
         </h1>
-        <span className='flex items-center justify-center flex-col lg:flex-row gap-2'>
+        {/*  <span className='flex items-center justify-center flex-col lg:flex-row gap-2'>
           <SearchForm
             placeholder='Buscar por institución'
             className='w-full lg:w-auto [&>input]:w-full [&>input]:lg:w-auto'
@@ -96,11 +96,11 @@ export default function IntegratedSystems() {
             </svg>
             Buscar
           </button>
-        </span>
+        </span> */}
       </div>
-      <div className='w-full grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8'>
+      <div className="w-full grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8">
         {cards.map((card, index) => (
-          <div key={index} className='w-full'>
+          <div key={index} className="w-full">
             <IntegratedSystemCard
               date={card.date}
               subTitle={card.subTitle}
