@@ -1,28 +1,28 @@
-'use client';
+"use client";
 
-import { useRef, useState, useEffect } from 'react';
-import { useTheme } from 'next-themes';
+import { useRef, useState, useEffect } from "react";
+import { useTheme } from "next-themes";
 
-import { chartColors } from '@/components/charts/chartjs-config';
-import '@/components/charts/chartjs-config';
+import { chartColors } from "@/components/charts/chartjs-config";
+import "@/components/charts/chartjs-config";
 import {
   Chart,
   DoughnutController,
   ArcElement,
   TimeScale,
   Tooltip,
-} from 'chart.js';
-import type { ChartData, Color, LegendItem } from 'chart.js';
-import 'chartjs-adapter-moment';
+} from "chart.js";
+import type { ChartData, Color, LegendItem } from "chart.js";
+import "chartjs-adapter-moment";
 
 // Import utilities
-import { tailwindConfig } from '@/components/utils/utils';
+import { tailwindConfig } from "@/components/utils/utils";
 
 Chart.register(DoughnutController, ArcElement, TimeScale, Tooltip);
-Chart.overrides.doughnut.cutout = '80%';
+Chart.overrides.doughnut.cutout = "80%";
 
 interface DoughnutProps {
-  data: ChartData;
+  data: any;
   width: number;
   height: number;
 }
@@ -32,7 +32,7 @@ export default function DoughnutChart({ data, width, height }: DoughnutProps) {
   const canvas = useRef<HTMLCanvasElement>(null);
   const legend = useRef<HTMLUListElement>(null);
   const { theme } = useTheme();
-  const darkMode = theme === 'dark';
+  const darkMode = theme === "dark";
   const {
     tooltipTitleColor,
     tooltipBodyColor,
@@ -45,7 +45,7 @@ export default function DoughnutChart({ data, width, height }: DoughnutProps) {
     if (!ctx) return;
 
     const newChart = new Chart(ctx, {
-      type: 'doughnut',
+      type: "doughnut",
       data: data,
       options: {
         layout: {
@@ -72,7 +72,7 @@ export default function DoughnutChart({ data, width, height }: DoughnutProps) {
         },
         interaction: {
           intersect: false,
-          mode: 'nearest',
+          mode: "nearest",
         },
         animation: {
           duration: 500,
@@ -82,7 +82,7 @@ export default function DoughnutChart({ data, width, height }: DoughnutProps) {
       },
       plugins: [
         {
-          id: 'htmlLegend',
+          id: "htmlLegend",
           afterUpdate(c, args, options) {
             const ul = legend.current;
             if (!ul) return;
@@ -93,51 +93,51 @@ export default function DoughnutChart({ data, width, height }: DoughnutProps) {
             // Reuse the built-in legendItems generator
             // const items = c.options.plugins?.legend?.labels?.generateLabels?.(c)
             const items: LegendItem[] | undefined = [];
-            data.labels?.forEach((item, i) => {
+            data.labels?.forEach((item: any, i: any) => {
               items.push({
-                fillStyle: data?.datasets[0].backgroundColor[i] as Color,
-                fontColor: '#666',
+                fillStyle: data?.datasets?.[0]?.backgroundColor?.[i] as Color,
+                fontColor: "#666",
                 hidden: false,
                 index: i,
                 lineWidth: 0,
                 pointStyle: undefined,
-                strokeStyle: '#fff',
+                strokeStyle: "#fff",
                 text: `${item}`,
               });
             });
             items?.forEach((item) => {
-              const li = document.createElement('li');
+              const li = document.createElement("li");
               li.style.margin = tailwindConfig.theme.margin[1];
               // Button element
-              const button = document.createElement('button');
+              const button = document.createElement("button");
               button.classList.add(
-                'btn-xs',
-                'border-0',
-                'shadow-none',
-                'bg-white',
-                'dark:bg-slate-800',
-                'text-slate-500',
-                'dark:text-slate-400',
-                'dark:border-slate-700',
+                "btn-xs",
+                "border-0",
+                "shadow-none",
+                "bg-white",
+                "dark:bg-slate-800",
+                "text-slate-500",
+                "dark:text-slate-400",
+                "dark:border-slate-700"
               );
-              button.style.opacity = item.hidden ? '.3' : '';
+              button.style.opacity = item.hidden ? ".3" : "";
               button.onclick = () => {
                 c.toggleDataVisibility(item.index!);
                 c.update();
               };
               // Color box
-              const box = document.createElement('span');
-              box.style.display = 'block';
+              const box = document.createElement("span");
+              box.style.display = "block";
               box.style.width = tailwindConfig.theme.width[2];
               box.style.height = tailwindConfig.theme.height[2];
               box.style.backgroundColor = item.fillStyle as string;
               box.style.borderRadius = tailwindConfig.theme.borderRadius.full;
               box.style.marginRight = tailwindConfig.theme.margin[1];
-              box.style.pointerEvents = 'none';
+              box.style.pointerEvents = "none";
               // Label
-              const label = document.createElement('span');
-              label.style.display = 'flex';
-              label.style.alignItems = 'center';
+              const label = document.createElement("span");
+              label.style.display = "flex";
+              label.style.alignItems = "center";
               const labelText = document.createTextNode(item.text);
               label.appendChild(labelText);
               li.appendChild(button);
@@ -149,7 +149,7 @@ export default function DoughnutChart({ data, width, height }: DoughnutProps) {
         },
       ],
     });
-    setChart(newChart);
+    setChart(newChart as any);
     return () => newChart.destroy();
   }, []);
 
@@ -167,16 +167,16 @@ export default function DoughnutChart({ data, width, height }: DoughnutProps) {
       chart.options.plugins!.tooltip!.backgroundColor = tooltipBgColor.light;
       chart.options.plugins!.tooltip!.borderColor = tooltipBorderColor.light;
     }
-    chart.update('none');
+    chart.update("none");
   }, [theme]);
 
   return (
-    <div className='grow flex flex-col justify-center'>
+    <div className="grow flex flex-col justify-center">
       <div>
         <canvas ref={canvas} width={width} height={height}></canvas>
       </div>
-      <div className='px-5 pt-2 pb-6'>
-        <ul ref={legend} className='flex flex-wrap justify-center -m-1'></ul>
+      <div className="px-5 pt-2 pb-6">
+        <ul ref={legend} className="flex flex-wrap justify-center -m-1"></ul>
       </div>
     </div>
   );
