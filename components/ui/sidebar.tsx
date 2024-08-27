@@ -61,11 +61,11 @@ const sideBarOptions = [
     href: "/population",
     icon: PopulationIcon,
   },
-  {
+  /*   {
     name: "Desempeño Histórico de Programas",
     href: "/historical-performance",
     icon: HistoricalIcon,
-  },
+  }, */
   {
     name: "Ejecución y Presupuesto",
     href: "/execution-and-budget",
